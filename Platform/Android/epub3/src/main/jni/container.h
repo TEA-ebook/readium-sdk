@@ -56,19 +56,19 @@ void javaContainer_addPackageToContainer(JNIEnv *env, jobject container, jlong p
  **************************************************/
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: Container
  */
 
 /*
- * Class:     org_readium_sdk_android_Container
+ * Class:     org_readium_sdkforcare_android_Container
  * Method:    nativeLoadData
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT void JNICALL
-Java_org_readium_sdk_android_Container_nativeLoadData(JNIEnv* env, jobject thiz, jlong pckgPtr);
+Java_org_readium_sdkforcare_android_Container_nativeLoadData(JNIEnv* env, jobject thiz, jlong pckgPtr);
 
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Container_nativeGetInputStream
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Container_nativeGetInputStream
         (JNIEnv* env, jobject obj, jlong containerPtr, jstring jRelativePath);
 
 #ifdef __cplusplus

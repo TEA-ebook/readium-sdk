@@ -130,57 +130,57 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved);
 JNIEXPORT void JNI_OnUnload(JavaVM* vm, void* reserved);
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: EPub3
  */
 
 #if ENABLE_ZIP_ARCHIVE_WRITER
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    setCachePath
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_setCachePath(JNIEnv* env, jobject thiz, jstring cachePath);
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_setCachePath(JNIEnv* env, jobject thiz, jstring cachePath);
 
 #endif //ENABLE_ZIP_ARCHIVE_WRITER
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    setContentFiltersRegistrationHandler
  * Signature: (Ljava/lang/Runnable;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* env, jobject thiz, jobject handler);
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* env, jobject thiz, jobject handler);
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    isEpub3Book
  * Signature: (Ljava/lang/String;)Z
  */
-//JNIEXPORT jboolean JNICALL Java_org_readium_sdk_android_EPub3_isEpub3Book(JNIEnv* env, jobject thiz, jstring Path);
+//JNIEXPORT jboolean JNICALL Java_org_readium_sdkforcare_android_EPub3_isEpub3Book(JNIEnv* env, jobject thiz, jstring Path);
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    openBook
- * Signature: (Ljava/lang/String;)Lorg/readium/sdk/android/Container
+ * Signature: (Ljava/lang/String;)Lorg/readium/sdkforcare/android/Container
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_EPub3_openBook(JNIEnv* env, jobject thiz, jstring path);
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_EPub3_openBook(JNIEnv* env, jobject thiz, jstring path);
 
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_EPub3_openBookPlain(JNIEnv* env, jobject thiz, jstring path);
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_EPub3_openBookPlain(JNIEnv* env, jobject thiz, jstring path);
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    initialize
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_initialize(JNIEnv* env, jobject thiz);
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_initialize(JNIEnv* env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    releaseNativePointer
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_releaseNativePointer(JNIEnv* env, jobject thiz, jlong ptr);
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_releaseNativePointer(JNIEnv* env, jobject thiz, jlong ptr);
 
 #ifdef __cplusplus
 }

@@ -45,13 +45,13 @@ extern "C" {
  * Internal constants
  **************************************************/
 
-static const char *javaContainerClassName = "org/readium/sdk/android/Container";
+static const char *javaContainerClassName = "org/readium/sdkforcare/android/Container";
 
 static const char *javaContainer_createContainerMethodName = "createContainer";
-static const char *javaContainer_createContainerSignature = "(JLjava/lang/String;)Lorg/readium/sdk/android/Container;";
+static const char *javaContainer_createContainerSignature = "(JLjava/lang/String;)Lorg/readium/sdkforcare/android/Container;";
 
 static const char *javaContainer_addPackageToContainerMethodName = "addPackageToContainer";
-static const char *javaContainer_addPackageToContainerSignature = "(Lorg/readium/sdk/android/Container;Lorg/readium/sdk/android/Package;)V";
+static const char *javaContainer_addPackageToContainerSignature = "(Lorg/readium/sdkforcare/android/Container;Lorg/readium/sdkforcare/android/Package;)V";
 
 /*
  * Internal variables
@@ -114,21 +114,21 @@ void javaContainer_addPackageToContainer(JNIEnv *env, jobject container, jlong p
  **************************************************/
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: Container
  */
 
 /*
- * Class:     org_readium_sdk_android_Container
+ * Class:     org_readium_sdkforcare_android_Container
  * Method:    nativeLoadData
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT void JNICALL
-Java_org_readium_sdk_android_Container_nativeLoadData(JNIEnv* env, jobject thiz, jlong pckgPtr) {
+Java_org_readium_sdkforcare_android_Container_nativeLoadData(JNIEnv* env, jobject thiz, jlong pckgPtr) {
 	//TODO: load the container data instead of passing the path only, as in the package
 }
 
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Container_nativeGetInputStream
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Container_nativeGetInputStream
 		(JNIEnv* env, jobject obj, jlong containerPtr, jstring jRelativePath) {
 	const char *relativePath = env->GetStringUTFChars(jRelativePath, 0);
 	ePub3::Container * container = (ePub3::Container *) containerPtr;

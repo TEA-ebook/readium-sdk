@@ -51,164 +51,164 @@ jobject javaPackage_createPackage(JNIEnv *env, jlong nativePtr);
  **************************************************/
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: Package
  */
 
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetSubtitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetSubtitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetSubtitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetShortTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetShortTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetShortTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetCollectionTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetCollectionTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetCollectionTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetEditionTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetEditionTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetEditionTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetExpandedTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetExpandedTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetExpandedTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetFullTitle
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetFullTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetFullTitle(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetUniqueID
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetUniqueID(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetUniqueID(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetURLSafeUniqueID
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetURLSafeUniqueID(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetURLSafeUniqueID(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetPackageID
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetPackageID(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetPackageID(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetType
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetType(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetType(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetVersion
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetVersion(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetVersion(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetISBN
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetISBN(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetISBN(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetLanguage
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetLanguage(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetLanguage(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetCopyrightOwner
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetCopyrightOwner(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetCopyrightOwner(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetSource
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetSource(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetSource(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetAuthors
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetAuthors(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetAuthors(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetModificationDate
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetModificationDate(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetModificationDate(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetSubjects
  * Signature: (J)Ljava/util/List;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Package_nativeGetSubjects(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetSubjects(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetCoverManifestItem
  * Signature: (J)Ljava/util/ManifestItem;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Package_nativeGetCoverManifestItem(JNIEnv* env, jobject thiz, jlong pckgPtr);
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetCoverManifestItem(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetManifestTable
  * Signature: (J)Ljava/util/List;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Package_nativeGetManifestTable
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetManifestTable
 		(JNIEnv* env, jobject thiz, jlong pckgPtr);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetManifestTable
  * Signature: (JJLjava/lang/String;)I;
  */
-JNIEXPORT jint JNICALL Java_org_readium_sdk_android_Package_nativeGetArchiveInfoSize
+JNIEXPORT jint JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetArchiveInfoSize
 		(JNIEnv* env, jobject thiz, jlong pckgPtr, jlong contnrPtr, jstring jrelativePath);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeInputStreamForRelativePath
  * Signature: (JJLjava/lang/String;IZ)Ljava/io/InputStream;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Package_nativeInputStreamForRelativePath
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeInputStreamForRelativePath
 		(JNIEnv* env, jobject thiz, jlong pckgPtr, jlong contnrPtr, jstring jrelativePath, jint bufferSize, jboolean isRange);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeRawInputStreamForRelativePath
  * Signature: (JJLjava/lang/String;I)Ljava/io/InputStream;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_Package_nativeRawInputStreamForRelativePath
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeRawInputStreamForRelativePath
 		(JNIEnv* env, jobject thiz, jlong pckgPtr, jlong contnrPtr, jstring jrelativePath, jint bufferSize);
 /*
- * Class:     org_readium_sdk_android_Package
+ * Class:     org_readium_sdkforcare_android_Package
  * Method:    nativeGetSmilDataAsJson
  * Signature: (J)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_Package_nativeGetSmilDataAsJson
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_Package_nativeGetSmilDataAsJson
 		(JNIEnv* env, jobject thiz, jlong pckgPtr);
 #ifdef __cplusplus
 }

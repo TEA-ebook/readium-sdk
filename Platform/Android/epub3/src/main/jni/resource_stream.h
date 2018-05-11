@@ -82,38 +82,38 @@ jobject javaResourceInputStream_createResourceInputStream(JNIEnv *env, long read
  * JNI functions
  **************************************************/
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeSkip
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeSkip
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong byteCount);
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeReset
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeReset
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jboolean ignoreMark);
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeMark
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeMark
 		(JNIEnv* env, jobject thiz, jlong nativePtr);
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeAvailable
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeAvailable
 		(JNIEnv* env, jobject thiz, jlong nativePtr);
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong dataLength);
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetBytesX
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetBytesX
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong dataLength, jbyteArray jbarray);
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetAllBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetAllBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr);
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetRangeBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetRangeBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong offset, jlong length);
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetRangeBytesX
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetRangeBytesX
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong offset, jlong length, jbyteArray jbarray);
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeClose
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeClose
 		(JNIEnv* env, jobject thiz, jlong nativePtr);
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: ResourceInputStream
  */
 

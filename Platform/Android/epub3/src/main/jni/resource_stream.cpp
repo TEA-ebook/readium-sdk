@@ -58,11 +58,11 @@ extern "C" {
 /*
  * Internal constants
  **************************************************/
-static const char *java_class_ResourceInputStream_name = "org/readium/sdk/android/util/ResourceInputStream";
+static const char *java_class_ResourceInputStream_name = "org/readium/sdkforcare/android/util/ResourceInputStream";
 static const char *java_class_IOException_name = "java/io/IOException";
 
 static const char *java_method_ResourceInputStream_createResourceInputStream_name = "createResourceInputStream";
-static const char *java_method_ResourceInputStream_createResourceInputStream_sign = "(J)Lorg/readium/sdk/android/util/ResourceInputStream;";
+static const char *java_method_ResourceInputStream_createResourceInputStream_sign = "(J)Lorg/readium/sdkforcare/android/util/ResourceInputStream;";
 
 /*
  * Internal variables
@@ -316,7 +316,7 @@ static jbyteArray GetBytesRange(JNIEnv* env, jobject thiz, jlong nativePtr, jlon
  **************************************************/
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: ResourceInputStream
  */
 
@@ -334,13 +334,13 @@ static void Skip(JNIEnv* env, jobject thiz, jlong nativePtr, jlong byteCount) {
 	seekableStream->Seek(byteCount, std::ios::cur);
 }
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeSkip
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeSkip
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong byteCount) {
 
 	Skip(env, thiz, nativePtr, byteCount);
 }
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeReset
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeReset
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jboolean ignoreMark) {
 
 	ResourceStream* stream = (ResourceStream*) nativePtr;
@@ -360,7 +360,7 @@ JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nat
 	}
 }
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeMark
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeMark
 		(JNIEnv* env, jobject thiz, jlong nativePtr) {
 
 	ResourceStream* stream = (ResourceStream*) nativePtr;
@@ -376,7 +376,7 @@ JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nat
 	stream->markPosition = seekableStream->Position();
 }
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeAvailable
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeAvailable
 		(JNIEnv* env, jobject thiz, jlong nativePtr) {
 
 	ResourceStream* stream = (ResourceStream*) nativePtr;
@@ -385,37 +385,37 @@ JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_na
 }
 
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong dataLength) {
 
 	return GetBytes(env, thiz, nativePtr, dataLength);
 }
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetBytesX
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetBytesX
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong jlen, jbyteArray jbarray) {
 
 	return GetBytesX(env, thiz, nativePtr, jlen, jbarray);
 }
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetAllBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetAllBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr) {
 
 	return GetAllBytes(env, thiz, nativePtr);
 }
 
-JNIEXPORT jbyteArray JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetRangeBytes
+JNIEXPORT jbyteArray JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetRangeBytes
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong offset, jlong length) {
 
 	return GetBytesRange(env, thiz, nativePtr, offset, length);
 }
 
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeGetRangeBytesX
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeGetRangeBytesX
 		(JNIEnv* env, jobject thiz, jlong nativePtr, jlong offset, jlong length, jbyteArray jbarray) {
 
 	return GetBytesRangeX(env, thiz, nativePtr, offset, length, jbarray);
 }
 
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_util_ResourceInputStream_nativeClose
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_util_ResourceInputStream_nativeClose
 		(JNIEnv* env, jobject thiz, jlong nativePtr) {
 	ResourceStream* stream = (ResourceStream*) nativePtr;
 	delete stream;

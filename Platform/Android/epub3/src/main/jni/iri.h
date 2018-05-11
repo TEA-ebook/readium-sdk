@@ -66,256 +66,256 @@ jobject javaIRI_createIRIurl(JNIEnv *env, jstring scheme, jstring host, jstring 
  **************************************************/
 
 /*
- * Package: org.readium.sdk.android
+ * Package: org.readium.sdkforcare.android
  * Class: IRI
  */
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    createNativeIRIempty
  * Signature: ()J
  */
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_IRI_createNativeIRIempty
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_IRI_createNativeIRIempty
 		(JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    createNativeIRIstring
  * Signature: (Ljava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_IRI_createNativeIRIstring
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_IRI_createNativeIRIstring
 		(JNIEnv *env, jobject thiz, jstring iriStr);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    createNativeIRIurn
  * Signature: (Ljava/lang/String;Ljava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_IRI_createNativeIRIurn
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_IRI_createNativeIRIurn
 		(JNIEnv *env, jobject thiz, jstring nameID, jstring namespacedString);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    createNativeIRIurl
  * Signature: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)J
  */
-JNIEXPORT jlong JNICALL Java_org_readium_sdk_android_IRI_createNativeIRIurl
+JNIEXPORT jlong JNICALL Java_org_readium_sdkforcare_android_IRI_createNativeIRIurl
 		(JNIEnv *env, jobject thiz, jstring scheme, jstring host, jstring path, jstring query, jstring fragment);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    isURN
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_org_readium_sdk_android_IRI_isURN
+JNIEXPORT jboolean JNICALL Java_org_readium_sdkforcare_android_IRI_isURN
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    isRelative
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_org_readium_sdk_android_IRI_isRelative
+JNIEXPORT jboolean JNICALL Java_org_readium_sdkforcare_android_IRI_isRelative
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    isEmpty
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_org_readium_sdk_android_IRI_isEmpty
+JNIEXPORT jboolean JNICALL Java_org_readium_sdkforcare_android_IRI_isEmpty
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getScheme
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getScheme
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getScheme
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getNameID
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getNameID
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getNameID
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getHost
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getHost
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getHost
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getCredentialsUID
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getCredentialsUID
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getCredentialsUID
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getCredentialsPWD
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getCredentialsPWD
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getCredentialsPWD
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getNamespacedString
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getNamespacedString
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getNamespacedString
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getPort
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_org_readium_sdk_android_IRI_getPort
+JNIEXPORT jint JNICALL Java_org_readium_sdkforcare_android_IRI_getPort
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getPath
  * Signature: (Z)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getPath
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getPath
   (JNIEnv *env, jobject thiz, jboolean);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getQuery
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getQuery
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getQuery
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getFragment
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getFragment
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getFragment
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getLastPathComponent
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_getLastPathComponent
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_getLastPathComponent
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    getContentFragmentIdentifier
- * Signature: ()Lorg/readium/sdk/android/CFI;
+ * Signature: ()Lorg/readium/sdkforcare/android/CFI;
  */
-JNIEXPORT jobject JNICALL Java_org_readium_sdk_android_IRI_getContentFragmentIdentifier
+JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_IRI_getContentFragmentIdentifier
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setScheme
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setScheme
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setScheme
   (JNIEnv *env, jobject thiz, jstring scheme);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setHost
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setHost
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setHost
   (JNIEnv *env, jobject thiz, jstring host);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setCredentials
  * Signature: (Ljava/lang/String;Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setCredentials
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setCredentials
   (JNIEnv *env, jobject thiz, jstring user, jstring pass);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    addPathComponent
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_addPathComponent
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_addPathComponent
   (JNIEnv *env, jobject thiz, jstring component);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setQuery
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setQuery
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setQuery
   (JNIEnv *env, jobject thiz, jstring query);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setFragment
  * Signature: (Ljava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setFragment
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setFragment
   (JNIEnv *env, jobject thiz, jstring fragment);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    setContentFragmentIdentifier
- * Signature: (Lorg/readium/sdk/android/CFI;)V
+ * Signature: (Lorg/readium/sdkforcare/android/CFI;)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_IRI_setContentFragmentIdentifier
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_IRI_setContentFragmentIdentifier
   (JNIEnv *env, jobject thiz, jobject cfi);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    toIRIString
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_toIRIString
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_toIRIString
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    toURIString
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_toURIString
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_toURIString
   (JNIEnv *env, jobject thiz);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    URLEncodeComponent
  * Signature: (Ljava/lang/String;)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_URLEncodeComponent
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_URLEncodeComponent
   (JNIEnv *, jclass, jstring str);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    PercentEncodeUCS
  * Signature: (Ljava/lang/String;)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_PercentEncodeUCS
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_PercentEncodeUCS
   (JNIEnv *, jclass, jstring str);
 
 /*
- * Class:     org_readium_sdk_android_IRI
+ * Class:     org_readium_sdkforcare_android_IRI
  * Method:    IDNEncodeHostname
  * Signature: (Ljava/lang/String;)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_org_readium_sdk_android_IRI_IDNEncodeHostname
+JNIEXPORT jstring JNICALL Java_org_readium_sdkforcare_android_IRI_IDNEncodeHostname
   (JNIEnv *, jclass, jstring host);
 
 

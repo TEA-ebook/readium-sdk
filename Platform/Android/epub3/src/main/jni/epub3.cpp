@@ -52,9 +52,9 @@ extern "C" {
  **************************************************/
 
 //TODO: Remove when JavaObjectsFactory methods passed to respective classes
-static const char *javaJavaObjectsFactoryClassName = "org/readium/sdk/android/JavaObjectsFactory";
+static const char *javaJavaObjectsFactoryClassName = "org/readium/sdkforcare/android/JavaObjectsFactory";
 
-static const char *javaEPub3ClassName = "org/readium/sdk/android/EPub3";
+static const char *javaEPub3ClassName = "org/readium/sdkforcare/android/EPub3";
 
 static const char *javaEPub3_createStringListMethodName = "createStringList";
 static const char *javaEPub3_createStringListSignature = "()Ljava/util/List;";
@@ -324,23 +324,23 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
     INIT_STATIC_METHOD_ID_RETVAL(createSpineItemList_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
             "createSpineItemList", "()Ljava/util/List;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(createSpineItem_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "createSpineItem", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lorg/readium/sdk/android/SpineItem;", ONLOAD_ERROR);
+            "createSpineItem", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Lorg/readium/sdkforcare/android/SpineItem;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(addSpineItemToList_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "addSpineItemToList", "(Ljava/util/List;Lorg/readium/sdk/android/SpineItem;)V", ONLOAD_ERROR);
+            "addSpineItemToList", "(Ljava/util/List;Lorg/readium/sdkforcare/android/SpineItem;)V", ONLOAD_ERROR);
 
     INIT_STATIC_METHOD_ID_RETVAL(createNavigationTable_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "createNavigationTable", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdk/android/components/navigation/NavigationTable;", ONLOAD_ERROR);
+            "createNavigationTable", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdkforcare/android/components/navigation/NavigationTable;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(createNavigationPoint_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "createNavigationPoint", "(Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdk/android/components/navigation/NavigationPoint;", ONLOAD_ERROR);
+            "createNavigationPoint", "(Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdkforcare/android/components/navigation/NavigationPoint;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(addElementToParent_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "addElementToParent", "(Lorg/readium/sdk/android/components/navigation/NavigationElement;Lorg/readium/sdk/android/components/navigation/NavigationElement;)V", ONLOAD_ERROR);
+            "addElementToParent", "(Lorg/readium/sdkforcare/android/components/navigation/NavigationElement;Lorg/readium/sdkforcare/android/components/navigation/NavigationElement;)V", ONLOAD_ERROR);
 
     INIT_STATIC_METHOD_ID_RETVAL(createManifestItemList_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
             "createManifestItemList", "()Ljava/util/List;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(createManifestItem_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "createManifestItem", "(Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdk/android/ManifestItem;", ONLOAD_ERROR);
+            "createManifestItem", "(Ljava/lang/String;Ljava/lang/String;)Lorg/readium/sdkforcare/android/ManifestItem;", ONLOAD_ERROR);
     INIT_STATIC_METHOD_ID_RETVAL(addManifestItemToList_ID, javaJavaObjectsFactoryClass, javaJavaObjectsFactoryClassName,
-            "addManifestItemToList", "(Ljava/util/List;Lorg/readium/sdk/android/ManifestItem;)V", ONLOAD_ERROR);
+            "addManifestItemToList", "(Ljava/util/List;Lorg/readium/sdkforcare/android/ManifestItem;)V", ONLOAD_ERROR);
 
     // Return the JNI version this library wants to use
     return JNI_VERSION;
@@ -356,12 +356,12 @@ JNIEXPORT void JNI_OnUnload(JavaVM* vm, void* reserved) {
 #if ENABLE_ZIP_ARCHIVE_WRITER
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    setCachePath
  * Signature: (Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL
-Java_org_readium_sdk_android_EPub3_setCachePath(JNIEnv* env, jobject thiz, jstring cachePath) {
+Java_org_readium_sdkforcare_android_EPub3_setCachePath(JNIEnv* env, jobject thiz, jstring cachePath) {
     const char* str;
     // Get a c string from java string
     GET_UTF8_RET(str, cachePath);
@@ -374,12 +374,12 @@ Java_org_readium_sdk_android_EPub3_setCachePath(JNIEnv* env, jobject thiz, jstri
 #endif //ENABLE_ZIP_ARCHIVE_WRITER
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    setContentFiltersRegistrationHandler
  * Signature: (Ljava/lang/Runnable;)V
  */
 JNIEXPORT void JNICALL
-Java_org_readium_sdk_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* env, jobject thiz, jobject handler) {
+Java_org_readium_sdkforcare_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* env, jobject thiz, jobject handler) {
 
     LOGD("EPub3.setContentFiltersRegistrationHandler(): received handler object %p", handler);
     if (handler != NULL) {
@@ -405,11 +405,11 @@ Java_org_readium_sdk_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* 
 }
 //
 ///*
-// * Class:     org_readium_sdk_android_EPub3
+// * Class:     org_readium_sdkforcare_android_EPub3
 // * Method:    isEpub3Book
 // * Signature: (Ljava/lang/String;)Z
 // */
-//JNIEXPORT jboolean JNICALL Java_org_readium_sdk_android_EPub3_isEpub3Book(JNIEnv* env, jobject thiz, jstring path) {
+//JNIEXPORT jboolean JNICALL Java_org_readium_sdkforcare_android_EPub3_isEpub3Book(JNIEnv* env, jobject thiz, jstring path) {
 //    // Initialize core ePub3 SDK
 //    initializeReadiumSDK(env);
 //
@@ -461,12 +461,12 @@ Java_org_readium_sdk_android_EPub3_setContentFiltersRegistrationHandler(JNIEnv* 
 
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    openBook
- * Signature: (Ljava/lang/String;)Lorg/readium/sdk/android/Container
+ * Signature: (Ljava/lang/String;)Lorg/readium/sdkforcare/android/Container
  */
 JNIEXPORT jobject JNICALL
-Java_org_readium_sdk_android_EPub3_openBook(JNIEnv* env, jobject thiz, jstring path) {
+Java_org_readium_sdkforcare_android_EPub3_openBook(JNIEnv* env, jobject thiz, jstring path) {
 
     // Initialize core ePub3 SDK
     initializeReadiumSDK(env);
@@ -552,7 +552,7 @@ Java_org_readium_sdk_android_EPub3_openBook(JNIEnv* env, jobject thiz, jstring p
 
 
 JNIEXPORT jobject JNICALL
-Java_org_readium_sdk_android_EPub3_openBookPlain(JNIEnv* env, jobject thiz, jstring path) {
+Java_org_readium_sdkforcare_android_EPub3_openBookPlain(JNIEnv* env, jobject thiz, jstring path) {
 
     // Initialize core ePub3 SDK
     initializeReadiumSDK(env);
@@ -611,21 +611,21 @@ Java_org_readium_sdk_android_EPub3_openBookPlain(JNIEnv* env, jobject thiz, jstr
 }
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    initialize
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_initialize(JNIEnv* env, jobject thiz) {
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_initialize(JNIEnv* env, jobject thiz) {
     // Initialize core ePub3 SDK
     initializeReadiumSDK(env);
 }
 
 /*
- * Class:     org_readium_sdk_android_EPub3
+ * Class:     org_readium_sdkforcare_android_EPub3
  * Method:    releaseNativePointer
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_org_readium_sdk_android_EPub3_releaseNativePointer(JNIEnv* env, jobject thiz, jlong ptr) {
+JNIEXPORT void JNICALL Java_org_readium_sdkforcare_android_EPub3_releaseNativePointer(JNIEnv* env, jobject thiz, jlong ptr) {
     jni::PointerPool::del(ptr);
 }
 
