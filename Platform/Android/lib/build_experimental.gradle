@@ -19,7 +19,7 @@ model {
             minSdkVersion.apiLevel = 19
 
             // manifest/uses-sdk@android:targetSdkVersion attribute in src/main/AndroidManifest.xml
-            targetSdkVersion.apiLevel = 26
+            targetSdkVersion.apiLevel = 28
 
             // manifest@android:versionCode attribute in src/main/AndroidManifest.xml
             versionCode 30
