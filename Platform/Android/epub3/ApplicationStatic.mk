@@ -19,9 +19,9 @@ endif
 ifeq ($(READIUM_CLANG),true)
 #NDK_TOOLCHAIN := clang
 NDK_TOOLCHAIN_VERSION := clang
-APP_STL := c++_shared
+APP_STL := c++_static
 else
 #NDK_TOOLCHAIN := gcc
 NDK_TOOLCHAIN_VERSION := 4.9
-APP_STL := gnustl_shared
+APP_STL := gnustl_static
 endif

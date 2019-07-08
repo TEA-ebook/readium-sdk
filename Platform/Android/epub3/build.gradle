@@ -146,6 +146,42 @@ task buildMk(dependsOn: "buildIncludes", type: Exec) {
             "NDK_DEBUG=1"
 }
 
+task buildMkStatic(dependsOn: "buildIncludes", type: Exec) {
+
+    // Retrieve ndk dir
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def ndkDir = properties.getProperty('ndk.dir', null)
+
+    def ndkDirIncludes = "${ndkDir}/sysroot/usr/include".toString().replaceAll("\\\\", "/")
+    println "NDK includes: ${ndkDirIncludes}"
+    environment "READIUM_NDK_INCLUDE_DIR", "${ndkDirIncludes}"
+
+    // Call ndk build
+
+    //def isWindows = OperatingSystem.current().isLinux();
+    def isWindows = Os.isFamily(Os.FAMILY_WINDOWS)
+
+    def ndkBuildExt = isWindows ? ".cmd" : ""
+    def projectPath = file('.').absolutePath
+    def buildScript = (ndk_experimental) ? "Experimental.mk" : "Stable.mk"
+
+    if (ndk_skipX86) environment 'READIUM_SKIPX86', 'true'
+    if (ndk_skipARM) environment 'READIUM_SKIPARM', 'true'
+    if (ndk_clang) environment 'READIUM_CLANG', 'true'
+    if (ndk_experimental) environment 'READIUM_EXPERIMENTAL', 'true'
+
+    commandLine "$ndkDir/ndk-build${ndkBuildExt}",
+            "-j", "4", //Runtime.runtime.availableProcessors()
+            '-C', projectPath,
+            'NDK_APPLICATION_MK=ApplicationStatic.mk',
+            "APP_BUILD_SCRIPT=${buildScript}",
+            "NDK_PROJECT_PATH=${projectPath}",
+            "NDK_DEBUG=1",
+            "NDK_LIBS_OUT=./libs-c++static",
+            "NDK_OUT=./obj-c++static"
+}
+
 tasks.whenTaskAdded { task ->
     def taskName = task.name
 
