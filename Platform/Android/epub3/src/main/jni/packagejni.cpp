@@ -808,6 +808,7 @@ JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeInpu
 
 	ePub3::ConstManifestItemPtr manifestItem = PCKG(pckgPtr)->ManifestItemAtRelativePath(ePub3::string(relativePath));
 	if (manifestItem != nullptr) {
+            try {
 		auto rawInputbyteStream = PCKG(pckgPtr)->ReadStreamForItemAtPath(path);
 		ePub3::ManifestItemPtr m = std::const_pointer_cast<ePub3::ManifestItem>(manifestItem);
 		if (isRange == JNI_TRUE) {
@@ -815,6 +816,11 @@ JNIEXPORT jobject JNICALL Java_org_readium_sdkforcare_android_Package_nativeInpu
 		} else {
 			byteStream = PCKG(pckgPtr)->GetFilterChainByteStream(m, dynamic_cast<ePub3::SeekableByteStream *>(rawInputbyteStream.release()));
 		}
+            }
+            catch (const std::exception& ex) {
+                LOGD("nativeInputStreamForRelativePath() EXCEPTION: %s\n", ex.what());
+                return NULL;
+            }
 	} else {
 		// In the rare case that the manifest item could not be resolved from the path,
 		// fallback to a non-filtered byte stream read.
