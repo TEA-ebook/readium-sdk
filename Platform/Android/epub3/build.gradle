@@ -140,7 +140,7 @@ task buildMk(dependsOn: "buildIncludes", type: Exec) {
     commandLine "$ndkDir/ndk-build${ndkBuildExt}",
             "-j", "4", //Runtime.runtime.availableProcessors()
             '-C', projectPath,
-            'NDK_APPLICATION_MK=Application.mk',
+            'NDK_APPLICATION_MK=ApplicationStatic.mk',
             "APP_BUILD_SCRIPT=${buildScript}",
             "NDK_PROJECT_PATH=${projectPath}",
             "NDK_DEBUG=1"
